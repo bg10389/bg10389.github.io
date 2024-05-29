@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <title>Ben Goldberg's Resume</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -83,45 +80,231 @@
         ul li {
             padding: 5px 0;
         }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #77aaff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #333;
+        }
+        .contact-info a:hover {
+            color: #77aaff;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, textarea, button {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #77aaff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+        @media (max-width: 600px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .menu-icon {
+                display: block;
+            }
+            #menu-toggle:checked + .menu {
+                display: flex;
+            }
+        }
+        button#submit-btn {
+            display: block; /* Ensure the button is displayed as a block element */
+        }
+        #contact-form {
+            margin-bottom: 100px; /* Adjust the value as needed to create enough space under the button */
+        }
+        .image-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-section img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 20%;
+        }
+        /* Styles for the popup */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Colin Haskins</h1>
     <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul class="menu">
+            <li><a href="https://bg10389.github.io/#contact">Contact</a></li>
+            <li><a href="https://bg10389.github.io/#objective">Objective</a></li>
+            <li><a href="https://bg10389.github.io/#profile">Profile</a></li>
+            <li><a href="https://bg10389.github.io/#skills">Skills</a></li>
+            <li><a href="https://bg10389.github.io/#proficiencies">Proficiencies</a></li>
+            <li><a href="https://bg10389.github.io/#employment">Employment</a></li>
+            <li><a href="https://bg10389.github.io/#service">Service</a></li>
+            <li><a href="https://bg10389.github.io/#education">Education</a></li>
         </ul>
     </nav>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Introduce yourself here.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
-            </div>
-            <!-- Add more projects as needed -->
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
-</body>
-</html>
+</header>
+
+<div class="container">
+    <div class="image-section">
+      
+    </div>
+
+    <section class="main-section" id="objective">
+        <h2 class="section-title">Objective</h2>
+        <p>Success-driven and enthusiastic Computer Science student seeking an internship/co-op.</p>
+    </section>
+
+    <section class="main-section download-section" id="download">
+        <h2 class="section-title">Download Resume PDF</h2>
+        <button id="downloadBtn">Download PDF</button>
+    </section>
+
+    <section class="main-section" id="profile">
+        <h2 class="section-title">Profile</h2>
+        <p>Currently enrolled in BS of Mechatronics Engineering – Expected graduation: Jan 2027<br><br></p>
+        <p></p>
+        <p><strong>Vice President of the KSU Electric Vehicle Team – Autonomous Vehicles</strong></p>
+        <ul>
+            <li>Won 1st place in the 2021 &amp; 2022 EVGrandPrix<br><br></li>
+        </ul>    
+        <p><strong>Member of the KSU Solar Vehicle Team</strong></p>
+        <ul>    
+            <li>Competition car driver and operator</li>
+            <li>Member of software team</li>
+        </ul>
+    </section>
+
+    <section class="main-section" id="skills">
+        <h2 class="section-title">Skills Summary</h2>
+        <ul>
+            <li>Hobby and consumer-grade additive manufacturing</li>
+            <li> specializing in motor control</li>
+            <li>Light Electric Vehicle Development</li>
+            <li>Problem Solving</li>
+        </ul>
+    </section>
+
+    <section class="main-section" id="proficiencies">
+        <h2 class="section-title">Technical Proficiencies</h2>
+        <ul>
+            <li>Softwares: Office Suite, Autodesk Inventor, HSMWORKS, AutoCAD, Autodesk Recap</li>
+            <li>Tools: C++, Python, CircuitPython, C</li>
+        </ul>
+    </section>
+
+    <section class="main-section" id="employment">
+        <h2 class="section-title">Employment History</h2>
+
+        <h3>Thyssenkrupp Polysius - Atlanta, GA</h3>
+        <p>Electrical & Instrumentation intern | December 2022 – Present</p>
+        <ul>
+            <li>Designed and modified wiring diagrams for multi-million dollar manufacturing facility projects</li>
+            <li>Worked with international clients and engineers </li>
+            <li>Extensive use of autoCAD to draft project proposals for electrical layouts</li>
+        </ul>
+    
+        <h3>Universal Alloy - Canton, GA / Ball Ground, GA</h3>
+        <p>General Manufacturing + Process Engineering intern | July 2022 - November 2022</p>
+        <ul>
+            <li>Worked on repairing and installing various industrial equipment in aerospace grade manufacturing facilities</li>
+            <li>Developed low-cost immediate solutions to various factory problems, improving downtime and losses</li>
+            <li>Worked actively work forklifts and various manufacturing equiptment, working in a heavy industry environment.</li>
+        </ul>
+        
+        <h3>Various Food and retail establishments</h3>
+        <p>2021-2022</p>
+        <ul>
+            <li>Worked at Domino's Pizza, Ingles markets, and Party City in Delis and Merchandise, working in fast paced stressful environments.</li>
+        </ul>
+    </section>
+
+
+    <section class="main-section" id="education">
+        <h2 class="section-title">Education</h2>
+        <h3>Kennesaw State University - Kennesaw, GA</h3>
+        <p>Bachelor of Science in Computer Science | Expected Graduation: May 2025</p>
+    </section>
+
+    <section class="main-section" id="contact-form">
+        <h2 class="section-title">Contact Me</h2>
+        <form action="TO BE ADDED" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required="">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required="">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required=""></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>© 2024 Ben Goldberg</p>
+</footer>
+
+<script src="./Colin Haskins&#39; Resume_files/jspdf.umd.min.js.download"></script>
+<script>
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        doc.text('Ben Goldberg\' Resume', 10, 10);
+        doc.save('Resume1.pdf');
+    });
+
+   
+</script>
+
+
+</body></html>
