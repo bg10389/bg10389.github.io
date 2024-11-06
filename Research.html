@@ -170,6 +170,18 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+          /* Flex container styling */
+        .media-container {
+            display: flex;
+            align-items: center; /* Align items vertically centered */
+            gap: 20px; /* Space between video and image */
+        }
+        
+        /* Optional: Set specific widths */
+        video, img {
+            width: 300px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -196,15 +208,14 @@
         <li>I initialized, recieved funding, and am actively researching Axial Flux Hub Motor design theory.</li>
         <li>I have developed a novel additively manufactured Axial Flux brushless motor with high efficiencies. Multiple groups have taken interest in my project, and with such success I am in talks with large organizations to further this project.</li>
          <h1>The motor in question:</h1>
-    <video width="250" height="360" controls>
-        <source src="media/spin.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-        
-    <h1>More of this motor:</h1>
-    <img src="media/car.jpg" alt="A cool car" width="640" height="360">
+    <video controls>
+            <source src="media/spin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    </section>
+        <!-- Image Embed -->
+        <img src="media/car.jpg" alt="A cool car">
+    </div>
 
     <section class="second-section" id="profile">
         <h2 class="section-title">FYS Undergraduate Research - Solar Panel Imaging Technology</h2>
