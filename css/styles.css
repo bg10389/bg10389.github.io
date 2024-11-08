@@ -64,7 +64,7 @@ a:hover {
 /* Specific styles for navigation links */
 .nav-link {
     color: #fff;
-    background-color: #77aaff;
+    background-color: #333;
     font-size: 1.2em;
     margin: 0 10px;
     padding: 10px 15px;
@@ -74,7 +74,7 @@ a:hover {
     transition: background-color 0.3s ease;
 }
 .nav-link:hover {
-    background-color: #005f99;
+    background-color: #1c1c1c;
     text-decoration: none;
 
 
