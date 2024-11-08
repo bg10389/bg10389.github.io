@@ -108,3 +108,44 @@ button {
 button:hover {
     background-color: #005f99;
 }
+/* Styling for navigation menu container */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide the checkbox for the menu toggle */
+#menu-toggle {
+    display: none;
+}
+
+/* Style the menu items as buttons */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+/* Styling individual navigation links as buttons */
+.menu li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #77aaff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #005f99;
+}
+
+/* Optional: Style for the menu icon (☰) */
+.menu-icon {
+    display: none; /* Hide by default unless you plan to use it in a mobile menu */
+}
