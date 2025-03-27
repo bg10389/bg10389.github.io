@@ -3,34 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio - Resume</title>
+  <title>My Portfolio - Home</title>
+  <!-- Google Fonts for elegant typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Main CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header with Logo, Navigation, and Download Resume -->
   <header>
-    <h1>My Name</h1>
-    <nav>
+    <div class="logo">
+      <h1>My Portfolio</h1>
+    </div>
+    <nav id="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="project1.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <!-- Download Resume Button -->
+      <a href="media/resume.pdf" download class="download-resume">Download Resume</a>
+      <!-- Mobile navigation toggle button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
     </nav>
   </header>
+  
   <main>
-    <section class="resume">
-      <h2>Resume</h2>
-      <p>This is a brief introduction about me, my skills, and experience. Replace this text with your own resume summary.</p>
+    <!-- Introduction Section -->
+    <section class="intro">
+      <h2>Welcome!</h2>
+      <p>Hi, I'm [Your Name], a professional [Your Profession]. This brief resume summary highlights my skills and experiences.</p>
     </section>
-    <section class="images">
+    
+    <!-- Profile Picture Section -->
+    <section class="profile">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery">
       <h2>Gallery</h2>
-      <div class="image-container">
-        <img src="https://via.placeholder.com/300x200" alt="Sample image">
-        <img src="https://via.placeholder.com/300x200" alt="Sample image">
+      <div class="gallery-grid">
+        <img src="media/car.jpg" alt="Gallery image 1">
+        <img src="media/car.jpg" alt="Gallery image 2">
+        <img src="media/car.jpg" alt="Gallery image 3">
       </div>
     </section>
   </main>
+  
   <footer>
-    <p>&copy; 2025 My Portfolio</p>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
   </footer>
+  
+  <!-- Main JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>

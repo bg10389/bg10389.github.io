@@ -3,30 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project 1 - My Portfolio</title>
+  <title>Project One - My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Project 1</h1>
-    <nav>
+    <div class="logo">
+      <h1>My Portfolio</h1>
+    </div>
+    <nav id="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="project1.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
     </nav>
   </header>
+  
   <main>
+    <!-- Project Detail Section -->
     <article class="project-detail">
-      <img src="https://via.placeholder.com/600x400" alt="Project 1 Image">
-      <h2>Project Title</h2>
-      <p>This project is about … Provide an in‑depth writeup here. Replace this text with your project description and details.</p>
-      <p>Technologies used: HTML, CSS, JavaScript, etc.</p>
-      <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+      <h2>Project One</h2>
+      <img src="https://via.placeholder.com/600x400" alt="Project One Header Image">
+      <p>This detailed write-up explains Project One. Include descriptions, challenges, solutions, and other relevant details here.</p>
+      <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, etc.</p>
+      <p>Check out the code on GitHub:</p>
+      <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a>
     </article>
   </main>
+  
   <footer>
-    <p>&copy; 2025 My Portfolio</p>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
   </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
