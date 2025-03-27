@@ -58,6 +58,22 @@ nav ul {
   color: #fff;
 }
 
+/* Download Resume Button */
+.download-resume {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.download-resume:hover {
+  background-color: #003f7f;
+}
+
 /* --- Main Content --- */
 main {
   margin: 20px 0;
