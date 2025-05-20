@@ -1,15 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.slides');
-  let current = 0;
-  const interval = 5000;
+// CAROUSEL LOGIC
+const track     = document.querySelector('.carousel-track');
+const slides    = Array.from(track.children);
+const prevBtn   = document.querySelector('.carousel-btn.prev');
+const nextBtn   = document.querySelector('.carousel-btn.next');
+let currentIndex = 0;
 
-  function show(n) {
-    slides.forEach((s,i) => s.classList.toggle('active', i === n));
-  }
+function updateCarousel() {
+  const width = slides[0].getBoundingClientRect().width;
+  track.style.transform = `translateX(-${currentIndex * width}px)`;
+}
 
-  show(current);
-  setInterval(() => {
-    current = (current + 1) % slides.length;
-    show(current);
-  }, interval);
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+});
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
+
+// SCROLL-REVEAL TIMELINE + CARDS
+const revealEls = document.querySelectorAll('.section, .project-card, .timeline-entry');
+const observerOpts = { threshold: 0.1 };
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, observerOpts);
+
+revealEls.forEach(el => {
+  el.classList.add('hidden');
+  revealObserver.observe(el);
 });
