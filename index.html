@@ -1,110 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio - Home</title>
-  <!-- Google Fonts for elegant typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- Main CSS file -->
-  <link rel="stylesheet" href="css/styles.css">
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ben Goldberg | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-  <!-- Header with Logo, Navigation, and Download Resume -->
-  <header>
-    <div class="logo">
-      <h1>My Portfolio</h1>
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="site-title">Ben Goldberg</h1>
+      <nav class="site-nav">
+        <a href="https://github.com/MeiK2333" target="_blank" class="nav-btn">GitHub</a>
+        <a href="https://owl-life.evt.example.com" target="_blank" class="nav-btn">Owl Life (EVT)</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="personal-projects.html" class="nav-link">Personal Projects</a>
+        <a href="evt.html" class="nav-link">EVT</a>
+        <a href="experience.html" class="nav-link">Work / Field Experience</a>
+      </nav>
     </div>
-    <nav id="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <!-- Download Resume Button -->
-      <a href="media/resume.pdf" download class="download-resume">Download Resume</a>
-      <!-- Mobile navigation toggle button -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
-    </nav>
   </header>
-  
-  <main>
-    <!-- Introduction Section -->
-    <section class="intro">
+
+  <main class="site-main">
+    <!-- Intro / Hero -->
+    <section class="intro container">
       <h2>Welcome!</h2>
-      <p>Hi, I'm Ben, a Mechatronics student, maker, and researcher!</p>
+      <p>I’m a mechatronics engineering student specializing in embedded systems, hardware & circuit design, automation with ROS2, rapid prototyping, and more. Here’s a showcase of my research, projects, and field experience.</p>
     </section>
-    
-    <!-- Profile Picture Section -->
-    <section class="profile">
-      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+
+    <!-- Carousel -->
+    <section class="carousel-section container">
+      <div class="carousel">
+        <div class="slides active">
+          <img src="assets/images/project1.jpg" alt="Axial Flux Motor Prototype"/>
+          <div class="slide-desc">3D‑printed axial flux motor achieving 70% peak efficiency</div>
+        </div>
+        <div class="slides">
+          <img src="assets/images/project2.jpg" alt="Autonomous Go‑Kart"/>
+          <div class="slide-desc">ROS2‑driven autonomous go‑kart in action</div>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
     </section>
-    <section class="main-section" id="proficiencies">
-      <h2 class="section-title">Technical Proficiencies</h2>
-      <ul>
-          <li>Softwares: Office Suite, Autodesk Inventor, HSMWORKS, AutoCAD, Autodesk Recap</li>
-          <li>Tools: C++, Python, CircuitPython, C, ROS</li>
-          <li>Expert in Hobby and consumer-grade additive manufacturing, working with Stratasys machines and lulzbot equipment</li>
-          <li>Metalworking, welding, fabrication. Experienced with HASS CNCS and manual lathes/mills</li>
-          <li>On-Demand problem solving, same-day engineering solutions</li>
-          <li>Specializing in design of axial flux brushless motors, pending patent on novel winding technology</li>
-          <li>OSHA 30 hour, MSHA 30 hour certifications</li>
+    <!-- Skills & Resume -->
+    <section class="skills container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Embedded Systems (Teensy, ESP32, STM32)</li>
+        <li>Circuit Design & PCB Layout</li>
+        <li>Electrical Harness Fabrication</li>
+        <li>Brushless Motor Design & Control</li>
+        <li>CNC Machining & CAD/CAM</li>
+        <li>3D Printing & Additive Manufacturing</li>
+        <li>ROS2 & Autonomous Systems</li>
+        <li>Rapid Prototyping & DfM</li>
       </ul>
-  </section>
+      <a href="resume.pdf" class="btn-download" download>Download My Resume (PDF)</a>
+    </section>
 
-  <section class="main-section" id="employment">
-      <h2 class="section-title">Employment History</h2>
-
-      <h3>Thyssenkrupp Polysius - Atlanta, GA</h3>
-      <p>Electrical & Instrumentation intern | December 2022 – Present</p>
-      <ul>
-          <li>Designed and modified wiring diagrams for multi-million dollar manufacturing facility projects</li>
-          <li>Worked with international clients and engineers </li>
-          <li>Extensive use of AutoCAD to draft project proposals for electrical layouts</li>
-      </ul>
-  
-      <h3>Universal Alloy - Canton, GA / Ball Ground, GA</h3>
-      <p>General Manufacturing + Process Engineering intern | July 2022 - November 2022</p>
-      <ul>
-          <li>Worked on repairing and installing various industrial equipment in aerospace grade manufacturing facilities</li>
-          <li>Developed low-cost immediate solutions to various factory problems, improving downtime and losses</li>
-          <li>Worked and trained on forklifts and various manufacturing equipment, working in a heavy industrial environment.</li>
-      </ul>
-      
-      <h3>HC Machine Services - Cypress, TX</h3>
-      <p>Machinist Internship | July 2020 - September 2021</p>
-      <ul>
-          <li>Worked at a growing machine shop, repairing broken MACH3 CNC routers, trained on manual mills, lathes, CNC machines.</li>
-      </ul>
-  </section>
-
-
-  <section class="main-section" id="education">
-      <h2 class="section-title">Education</h2>
-      <h3>Kennesaw State University - Kennesaw, GA</h3>
-      <p>Bachelor of Science in Mechatronics Engineering| Expected Graduation: Jan 2027</p>
-  </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="media/car.jpg" alt="Gallery image 1">
-        <img src="media/car.jpg" alt="Gallery image 2">
-        <img src="media/car.jpg" alt="Gallery image 3">
+    <!-- Employment History -->
+    <section class="experience container">
+      <h2>Employment History</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>President & Mechanical Lead, KSU EVT</h3>
+          <span class="timeline-date">2024 – Present</span>
+          <p>Led mechanical integration & autonomy stack development for electric go‑kart competitions.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Undergrad Researcher, KSU ME</h3>
+          <span class="timeline-date">2023 – Present</span>
+          <p>Developed custom axial flux BLDC motors with polymer stators, achieving 70% efficiency.</p>
+        </div>
+        <!-- Add more entries -->
       </div>
     </section>
   </main>
-  
-  <footer>
-    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Ben Goldberg. All rights reserved.</p>
+    </div>
   </footer>
-  
-  <!-- Main JavaScript file -->
-  <script src="script.js"></script>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
