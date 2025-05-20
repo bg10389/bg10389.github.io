@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ben Goldberg | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
@@ -12,81 +12,103 @@
     <div class="container">
       <h1 class="site-title">Ben Goldberg</h1>
       <nav class="nav-links">
-        <a href="https://github.com/MeiK2333" target="_blank">GitHub</a>
-        <a href="https://owl-life.evt.example.com" target="_blank">Owl Life (EVT)</a>
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
-        <a href="personal-projects.html">Personal Projects</a>
+        <a href="personal-projects.html">Projects</a>
         <a href="evt.html">EVT</a>
         <a href="experience.html">Experience</a>
+        <a href="https://github.com/MeiK2333" target="_blank">GitHub</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Hi, I’m Ben Goldberg</h1>
-    <p>Mechatronics engineer & maker focusing on embedded systems, hardware design, ROS2 autonomy, rapid prototyping, and manufacturing at the intersection of software and machinery.</p>
-    <a href="resume.pdf" class="btn">Download Resume</a>
+    <div class="container">
+      <h1>Hi, I’m Ben Goldberg</h1>
+      <p>Mechatronics engineer & maker specializing in embedded systems, hardware design, ROS2 autonomy, rapid prototyping, and manufacturing integration.</p>
+      <a href="resume.pdf" class="btn">Download Resume</a>
+    </div>
   </section>
 
-  <!-- PROJECTS CAROUSEL -->
+  <!-- FEATURED PROJECTS -->
   <section class="section">
-    <h2>Featured Projects</h2>
-    <div class="carousel container">
-      <button class="carousel-btn prev">&#8249;</button>
-      <div class="carousel-track">
-        <div class="carousel-item">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
           <img src="assets/images/project1.jpg" alt="Axial Flux Motor"/>
-          <div class="desc">3D‑printed axial flux motor at 70% peak efficiency</div>
+          <div class="content">
+            <h3>3D‑Printed Axial Flux Motor</h3>
+            <p>Custom polymer stator design achieving 70% peak efficiency.</p>
+            <a href="#">Read More</a>
+          </div>
         </div>
-        <div class="carousel-item">
+        <div class="project-card">
           <img src="assets/images/project2.jpg" alt="Autonomous Go‑Kart"/>
-          <div class="desc">ROS2‑powered autonomous go‑kart in action</div>
+          <div class="content">
+            <h3>ROS2 Autonomous Go‑Kart</h3>
+            <p>Integrated OAK‑D vision, LiDAR, and CANbus controls for waypoint navigation.</p>
+            <a href="#">View Code</a>
+          </div>
         </div>
-        <!-- …more slides… -->
+        <div class="project-card">
+          <img src="assets/images/project3.jpg" alt="Battery BMS"/>
+          <div class="content">
+            <h3>Custom Li‑Ion BMS</h3>
+            <p>Teensy‑based cell balancing with REST telemetry dashboard.</p>
+            <a href="#">Schematic</a>
+          </div>
+        </div>
       </div>
-      <button class="carousel-btn next">&#8250;</button>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section class="section">
-    <h2>Skills & Tools</h2>
-    <ul class="skills-list container">
-      <li>Embedded Systems (Teensy, ESP32, STM32)</li>
-      <li>PCB & Circuit Design</li>
-      <li>Li‑Ion Battery Fabrication</li>
-      <li>Brushless Motor Design & Control</li>
-      <li>CNC Machining & CAD/CAM</li>
-      <li>3D Printing & Additive Manufacturing</li>
-      <li>ROS2 & Autonomous Software</li>
-      <li>Rapid Prototyping & DfM</li>
-    </ul>
+    <div class="container">
+      <h2>Core Skills</h2>
+      <ul class="skills-list">
+        <li>Embedded Systems</li>
+        <li>Servo & Motor Control</li>
+        <li>Circuit & PCB Design</li>
+        <li>CNC Machining</li>
+        <li>3D Printing</li>
+        <li>ROS2 & Robotics</li>
+        <li>Rapid Prototyping</li>
+        <li>DFM & QA</li>
+      </ul>
+    </div>
   </section>
 
   <!-- EXPERIENCE TIMELINE -->
   <section class="section">
-    <h2>Experience</h2>
-    <div class="timeline container">
-      <div class="timeline-entry">
-        <h3>President & Mechanical Lead, KSU EVT</h3>
-        <div class="date">2024 – Present</div>
-        <p>Driving mechanical integration & autonomy stack development on competition go‑karts.</p>
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-entry">
+          <h3>President & Mechanical Lead, KSU EVT</h3>
+          <div class="date">2024 – Present</div>
+          <p>Overseeing chassis design, electromechanical integration, and autonomy stack for competition go‑karts.</p>
+        </div>
+        <div class="timeline-entry">
+          <h3>Undergrad Researcher, KSU ME</h3>
+          <div class="date">2023 – Present</div>
+          <p>Leading axial flux motor R&D: CAD → 3D printing → bench validation at 70% efficiency.</p>
+        </div>
+        <div class="timeline-entry">
+          <h3>R&D Intern, AeroTech Innovations</h3>
+          <div class="date">Summer 2023</div>
+          <p>Developed automated assembly tooling and PLC/HMI controls for aerospace components.</p>
+        </div>
       </div>
-      <div class="timeline-entry">
-        <h3>Undergrad Researcher, KSU ME</h3>
-        <div class="date">2023 – Present</div>
-        <p>Leading axial flux BLDC motor R&D—3D‑printed stators, bench testing to 70% efficiency.</p>
-      </div>
-      <!-- …more entries… -->
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Ben Goldberg. All rights reserved.</p>
+      <p>© 2025 Ben Goldberg. All rights reserved.</p>
     </div>
   </footer>
 
